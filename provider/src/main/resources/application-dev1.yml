@@ -1,0 +1,29 @@
+
+
+# SPRING PROFILES
+spring:
+  profiles: dev1
+  application:
+    name: fbn-provider-dev1
+    #mvc:
+    #view:
+      #prefix: /WEB-INF/views/
+      #suffix: .html        
+    # HTTP ENCODING
+  http:
+    encoding.charset: UTF-8
+    encoding.enable: true
+    encoding.force: true
+
+server:
+  port: 8065
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://172.20.2.167:8088/eureka/,http://172.20.2.167:8089/eureka/
+  instance:
+    appname: fbn-provider-dev1
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2

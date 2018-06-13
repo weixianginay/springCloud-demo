@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: fbn-gateway-zuul
+  boot:
+    admin:
+      url: http://172.20.2.167:8030
+management:
+  security:
+    enabled: false
+server:
+  port: 8050
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://172.20.2.167:8088/eureka/,http://172.20.2.167:8089/eureka/
+
+zuul:
+  routes:
+    api-p:
+      path: /p/**
+      serviceId: fbn-provider-dev1
+    api-c:
+      path: /c/**
+      serviceId: service-feign
+  strip-prefix: true
+
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000

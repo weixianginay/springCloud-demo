@@ -1,0 +1,29 @@
+
+
+# SPRING PROFILES
+spring:
+  application:
+    name: service-feign
+  boot:
+    admin:
+      url: http://172.20.2.167:8030
+management:
+  security:
+    enabled: false
+
+server:
+#    context-path: /feign
+    port: 8070
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://172.20.2.167:8088/eureka/,http://172.20.2.167:8089/eureka/
+  healthcheck:
+      enabled: true
+  instance:
+    appname: service-feign
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
