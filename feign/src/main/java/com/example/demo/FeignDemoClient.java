@@ -9,10 +9,10 @@ public interface FeignDemoClient {
 //url = "http://localhost:8080/thirdApi"
 
     @GetMapping(value = "/hello/get")
-    public String get();
+    String get();
 
     @PostMapping(value = "/hello/post")
-    public String post();
+    String post();
 
 
 }
