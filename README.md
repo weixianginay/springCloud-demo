@@ -26,8 +26,8 @@
 # 路径地址 linux服务器IP 172.20.2.167
  
 ## eureka高可用
-* eureka1:  172.20.2.167:8088
-* eureka2:  172.20.2.167:8089
+eureka1:  172.20.2.167:8088
+eureka2:  172.20.2.167:8089
 
 ### 启动jar
 nohup java -jar eureka-server-0.0.1-SNAPSHOT.jar & <br />
